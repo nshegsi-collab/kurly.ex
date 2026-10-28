@@ -1,0 +1,20 @@
+h1{background-color:yellow;}
+body{
+  background-color:pink;
+}
+/*같은 선택자의 경우*/
+p{color:orange;}
+p{color:hotpink;}
+
+/*다른 선택자인 경우*/
+#css{
+  background-color:gray;
+}
+.css{
+  background-color:lightblue;
+}
+div{
+  width:700px;
+  height:200px;
+  background-color:yellow;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float중첩</title>
+  <style>
+    .big-area{
+      /*요소의 크기에 영향을 주지 않는 외곽선(공간을 차지하지 않는다)*/
+      outline:1px solid red;
+      float:left;
+      width:100px;
+      margin-right:10px;
+      padding:10px;
+      background-color:#999;
+    }
+    .small-unit{
+      width:48px;
+      height:48px;
+      background-color:#333;
+      margin:1px;
+      color:#fff;
+      float:left;
+    }
+  </style>
+</head>
+<body>
+  <div class="big-area">
+    <div class="small-unit">A</div>
+    <div class="small-unit">B</div>
+    <div class="small-unit">C</div>
+    <div class="small-unit">D</div>
+  </div>
+  <div class="big-area">
+    <div class="small-unit">1</div>
+    <div class="small-unit">2</div>
+    <div class="small-unit">3</div>
+    <div class="small-unit">4</div>
+  </div>
+</body>
+</html>

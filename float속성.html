@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float속성</title>
+  <style>
+    /*클리어픽스핵*/
+    .parent::after{/*.parent의 마지막 자손으로 가상요소를 생성*/
+      content:"";
+      display:block;
+      clear:both;/*float속성을 적용한 요소의 높이를 부모가 인식하게 됨*/
+    }
+
+    .parent{/*자식요소의 크기만큼 적응하는 상태*/
+      background-color:#ccc;
+    }
+    .child{
+      width:150px;
+      height:150px;
+      float:left;
+    }
+    .ch1{background-color:#fc0;}
+    .ch2{background-color:#f60;}
+    .ch3{background-color:#f00;}
+
+    .uncle{
+      width:200px; height:200px;
+      background-color:#00f;
+      font-size:32px;
+      color:#ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child ch1">글씨를 써볼게요.</div>
+    <div class="child ch2">글씨를 써볼게요.</div>
+    <div class="child ch3">글씨를 써볼게요.</div>
+  </div>
+  <div class="uncle">삼촌</div>
+</body>
+</html>

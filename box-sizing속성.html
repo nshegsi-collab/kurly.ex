@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-sizing속성</title>
+  <style>
+    /*
+      box-sizing : border-box
+      width와 height속성이 padding및 border를 포함하며, margin을 포함하지 않는다
+      예) width: 350px인 요소에 border를 10px로 적용하면 실제 브라우저에 렌더링되는 요소의 크기는 370px이 되는데 border-box를 적용하면 350px만큼만 영역을 차지하게 된다
+    */
+    .container{
+      width:300px;
+      border:1px solid red;
+      background-color:#ababab;
+    }
+    .box1{
+      width:100%;
+      border:10px solid black;
+      background-color:skyblue;
+      /*요소의 넓이가 100%(요소가 차지할 수 있는 최대 넓이)에서 테두리 10px만큼 추가되어 부모요소 보다 커짐 -> 결과적으로 레이아웃이 무너집니다*/
+      box-sizing:content-box;/*기본값*/
+    }
+    .box2{
+      width:100%;
+      border:10px solid blue;
+      background-color:lightgreen;
+      box-sizing:border-box;
+      /*box-sizing을 border-box로 설정하면 width:100%에 border가 포함되어 결과적으로 width가 100% 이상 늘어나지 않는다*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+  </div>
+</body>
+</html>

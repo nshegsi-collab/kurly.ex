@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background속성</title>
+  <style>
+    ,box{
+      outline: 1px solid red;
+      width: 100%;
+      height: 400px;
+    }
+    /*단일 배경*/
+    .background-single{
+      /*배경이미지*/
+      background-image: url("imges/bg_image/image1.jpg");
+      /*배경이미지 크기 설정*/
+      background-size: 100% 400px/*넓이(x축) 높이(y축)*/;
+      background-size: contain; /*배경을 사용하는 요소를 벗어나지 않는 최대 크기로 이미지를 확대 또는 축소, 가로세로 비율을 유지*/
+      background-size: cover; /*이미지가 요소를 완전히 채우도록 설정, 가로세로 비율 유지*/
+
+      /*반복 배경 없음*/
+      background-repeat: repeat:no-repeat;
+      
+      /*배경이미지와 색상 혼합*/
+      .background-imges{
+        
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-single box">
+    <h1>TItle</h1>
+  </div>
+  <div class="background-imge box"></div>
+  <div class="background-multiple box"></div>
+</body>
+</html>

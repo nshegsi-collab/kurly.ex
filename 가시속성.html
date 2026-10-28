@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가시속성</title>
+<!--
+display : 화면상에 어떻게 보일지를 결정합니다.
+
+1. block – block값이 적용된 객체는 초기 너비 값이 100%이며 나란한 줄에 다른 객체가 오지 못하게 합니다.
+
+2. inline – inline값이 적용된 객체는 너비 값을 가질 수 없는 속성 값이며 나란한 줄에 다른 inline요소가 위치할 수 있게 합니다.
+
+3. inline-block - 너비 값을 사용할 수 있게 하고 나란한 줄에 다른 객체를 오게 하는 속성입니다.
+(block과 inline의 장점만 모았다 할 수 있습니다.)
+    
+4. none – 구성 객체가 화면에서 사라지게 합니다.(제거)
+-->
+<style>
+  .container1 > span{
+    width:300px; height:50px;
+    margin:10px;
+    display:none;/*요소가 화면에서 사라짐*/
+    display:inline;/*인라인 요소는 width와 height를 적용할 수 없다*/
+    background-color:orange;
+  }
+  .container1 > #box1{
+    display:inline-block;/*width와 height속성을 적용할 수 있다*/
+  }
+  .container1 > #box2{
+    display:block;/*초기 넓이 값 100%*/
+  }
+
+  /*
+    visibility: hidden;
+    적용된 객체는 화면에서 사라지나 display:none;과는 다르게 단지 시야에서만 보이지 않게 합니다.
+  */
+  .container2 > .box{
+    width:200px;
+    height:100px;
+    margin:10px;
+    background-color:lightcoral;
+    color:white;
+  }
+  .visible{
+    visibility:visible;/*기본값*/
+  }
+  .hidden{
+    visibility:hidden;
+  }
+
+  /*
+  opacity : 투명도를 설정할 수 있게 합니다
+  속성값은 0.0(투명) ~ 1.0(불투명)사이 소수점 값을 사용합니다
+  */
+  .container3 > span{
+    background-color:black;
+    color:white;
+    font-size:20px;
+  }
+  .container3 > .box1{
+    opacity:1;
+  }
+  .container3 > .box2{
+    opacity:0.5;
+  }
+  .container3 > .box3{
+    opacity:0;
+  }
+</style>
+</head>
+
+<body>
+  <div class="container1">
+    <span>display:inline</span>
+    <span id="box1">display:inline-block</span>
+    <span id="box2">display:block</span>
+  </div>
+
+  <div class="container2">
+    <div class="box hidden">hidden</div>
+    <div class="box visible">visible</div>
+  </div>
+
+  <div class="container3">
+    <span class="box1">opacity:1</span>
+    <span class="box2">opacity:0.5</span>
+    <span class="box3">opacity:0</span>
+  </div>
+</body>
+
+</html>
